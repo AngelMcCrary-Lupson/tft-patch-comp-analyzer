@@ -1,7 +1,7 @@
 import json
 
 def get_comp():
-    with open("dummydata3.json") as f:
+    with open("dummydata.json") as f:
         data = json.load(f)
     comp_data = data
     # def parseJSON(data):

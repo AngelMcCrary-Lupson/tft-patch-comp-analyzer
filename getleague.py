@@ -3,8 +3,8 @@ import json
 import requests
 
 print(api_key)
-region = "eun1"
-country = "europe"
+region = "na1"
+country = "americas"
 URL = f"https://{region}.api.riotgames.com/tft/league/v1/grandmaster?api_key={api_key}"
 
 r = requests.get(URL)
