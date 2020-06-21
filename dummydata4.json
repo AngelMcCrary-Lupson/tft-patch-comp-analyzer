@@ -1,0 +1,173 @@
+                { 
+                "companion": {
+                    "content_ID": "1297c3a5-7f11-42ef-a133-1b5e12513fac",
+                    "skin_ID": 3,
+                    "species": "PetTFTAvatar"
+                },
+                "gold_left": 4,
+                "last_round": 38,
+                "level": 9,
+                "placement": 1,
+                "players_eliminated": 1,
+                "puuid": "9v3fd098rRGPdPYYzec15qlnGywaIREO8_7rjuKVYHNFTnpBLlt1CYM4ADtqbtXlZk_JHFSje0v3Uw",
+                "time_eliminated": 2090.9501953125,
+                "total_damage_to_players": 161,
+                "traits": [
+                    {
+                        "name": "Astro",
+                        "num_units": 1,
+                        "style": 0,
+                        "tier_current": 0,
+                        "tier_total": 1
+                    },
+                    {
+                        "name": "Blaster",
+                        "num_units": 2,
+                        "style": 1,
+                        "tier_current": 1,
+                        "tier_total": 2
+                    },
+                    {
+                        "name": "Chrono",
+                        "num_units": 2,
+                        "style": 1,
+                        "tier_current": 1,
+                        "tier_total": 4
+                    },
+                    {
+                        "name": "Cybernetic",
+                        "num_units": 1,
+                        "style": 0,
+                        "tier_current": 0,
+                        "tier_total": 2
+                    },
+                    {
+                        "name": "Demolitionist",
+                        "num_units": 2,
+                        "style": 3,
+                        "tier_current": 1,
+                        "tier_total": 1
+                    },
+                    {
+                        "name": "Mercenary",
+                        "num_units": 1,
+                        "style": 3,
+                        "tier_current": 1,
+                        "tier_total": 1
+                    },
+                    {
+                        "name": "Rebel",
+                        "num_units": 4,
+                        "style": 1,
+                        "tier_current": 1,
+                        "tier_total": 3
+                    },
+                    {
+                        "name": "Set3_Brawler",
+                        "num_units": 4,
+                        "style": 3,
+                        "tier_current": 2,
+                        "tier_total": 2
+                    },
+                    {
+                        "name": "Set3_Celestial",
+                        "num_units": 2,
+                        "style": 1,
+                        "tier_current": 1,
+                        "tier_total": 3
+                    },
+                    {
+                        "name": "Set3_Mystic",
+                        "num_units": 1,
+                        "style": 0,
+                        "tier_current": 0,
+                        "tier_total": 2
+                    },
+                    {
+                        "name": "SpacePirate",
+                        "num_units": 1,
+                        "style": 0,
+                        "tier_current": 0,
+                        "tier_total": 2
+                    }
+                ],
+                "units": [
+                    {
+                        "character_id": "TFT3_Ziggs",
+                        "items": [],
+                        "name": "",
+                        "rarity": 0,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Malphite",
+                        "items": [],
+                        "name": "",
+                        "rarity": 0,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Blitzcrank",
+                        "items": [],
+                        "name": "",
+                        "rarity": 1,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Ezreal",
+                        "items": [
+                            57,
+                            4,
+                            58
+                        ],
+                        "name": "",
+                        "rarity": 2,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Vi",
+                        "items": [
+                            36,
+                            68
+                        ],
+                        "name": "",
+                        "rarity": 2,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Jinx",
+                        "items": [
+                            22,
+                            23,
+                            26
+                        ],
+                        "name": "",
+                        "rarity": 3,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Gnar",
+                        "items": [],
+                        "name": "",
+                        "rarity": 3,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Gangplank",
+                        "items": [
+                            15,
+                            12
+                        ],
+                        "name": "",
+                        "rarity": 4,
+                        "tier": 2
+                    },
+                    {
+                        "character_id": "TFT3_Lulu",
+                        "items": [],
+                        "name": "",
+                        "rarity": 4,
+                        "tier": 1
+                    }
+                ]
+            }
