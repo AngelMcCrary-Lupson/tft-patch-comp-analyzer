@@ -1,0 +1,173 @@
+              {
+               "companion": {
+                   "content_ID": "c3a40c29-9a00-4ea8-a023-3e3aa7bee23f",
+                   "skin_ID": 8,
+                   "species": "PetSGShisa"
+               },
+               "gold_left": 0,
+               "last_round": 34,
+               "level": 9,
+               "placement": 3,
+               "players_eliminated": 1,
+               "puuid": "QFtV1Gb2jcViKD0mbfXn2DhYF-jsWKUTtbJ2oKSy3b9P4qIGspikCtsfr4s2C1uNksQka4nH5xkgXw",
+               "time_eliminated": 1992.6109619140625,
+               "total_damage_to_players": 106,
+               "traits": [
+                   {
+                       "name": "Battlecast",
+                       "num_units": 1,
+                       "style": 0,
+                       "tier_current": 0,
+                       "tier_total": 4
+                   },
+                   {
+                       "name": "Cybernetic",
+                       "num_units": 1,
+                       "style": 0,
+                       "tier_current": 0,
+                       "tier_total": 2
+                   },
+                   {
+                       "name": "Infiltrator",
+                       "num_units": 2,
+                       "style": 1,
+                       "tier_current": 1,
+                       "tier_total": 3
+                   },
+                   {
+                       "name": "MechPilot",
+                       "num_units": 1,
+                       "style": 0,
+                       "tier_current": 0,
+                       "tier_total": 1
+                   },
+                   {
+                       "name": "Paragon",
+                       "num_units": 1,
+                       "style": 3,
+                       "tier_current": 1,
+                       "tier_total": 1
+                   },
+                   {
+                       "name": "Protector",
+                       "num_units": 3,
+                       "style": 1,
+                       "tier_current": 1,
+                       "tier_total": 3
+                   },
+                   {
+                       "name": "Rebel",
+                       "num_units": 1,
+                       "style": 0,
+                       "tier_current": 0,
+                       "tier_total": 3
+                   },
+                   {
+                       "name": "Set3_Celestial",
+                       "num_units": 2,
+                       "style": 1,
+                       "tier_current": 1,
+                       "tier_total": 3
+                   },
+                   {
+                       "name": "Set3_Mystic",
+                       "num_units": 2,
+                       "style": 1,
+                       "tier_current": 1,
+                       "tier_total": 2
+                   },
+                   {
+                       "name": "StarGuardian",
+                       "num_units": 3,
+                       "style": 1,
+                       "tier_current": 1,
+                       "tier_total": 3
+                   },
+                   {
+                       "name": "Starship",
+                       "num_units": 1,
+                       "style": 3,
+                       "tier_current": 1,
+                       "tier_total": 1
+                   }
+               ],
+               "units": [
+                   {
+                       "character_id": "TFT3_XinZhao",
+                       "items": [
+                           55,
+                           77,
+                           59
+                       ],
+                       "name": "",
+                       "rarity": 1,
+                       "tier": 2
+                   },
+                   {
+                       "character_id": "TFT3_Neeko",
+                       "items": [],
+                       "name": "",
+                       "rarity": 2,
+                       "tier": 2
+                   },
+                   {
+                       "character_id": "TFT3_Soraka",
+                       "items": [],
+                       "name": "",
+                       "rarity": 3,
+                       "tier": 2
+                   },
+                   {
+                       "character_id": "TFT3_Fizz",
+                       "items": [
+                           44,
+                           49,
+                           34
+                       ],
+                       "name": "",
+                       "rarity": 3,
+                       "tier": 2
+                   },
+                   {
+                       "character_id": "TFT3_AurelionSol",
+                       "items": [],
+                       "name": "",
+                       "rarity": 4,
+                       "tier": 2
+                   },
+                   {
+                       "character_id": "TFT3_Ekko",
+                       "items": [
+                           56
+                       ],
+                       "name": "",
+                       "rarity": 4,
+                       "tier": 1
+                   },
+                   {
+                       "character_id": "TFT3_Lulu",
+                       "items": [],
+                       "name": "",
+                       "rarity": 4,
+                       "tier": 2
+                   },
+                   {
+                       "character_id": "TFT3_Urgot",
+                       "items": [
+                           77
+                       ],
+                       "name": "",
+                       "rarity": 4,
+                       "tier": 1
+                   },
+                   {
+                       "character_id": "TFT3_Janna",
+                       "items": [
+                           2
+                       ],
+                       "name": "",
+                       "rarity": 4,
+                       "tier": 1
+                   }
+               ]
+           }
