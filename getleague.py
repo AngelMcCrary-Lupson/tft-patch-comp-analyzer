@@ -1,17 +1,18 @@
 from config import api_key
 import json
 import requests
+import declarecomp
 
-print(api_key)
+# print(api_key)
 region = "na1"
 country = "americas"
 URL = f"https://{region}.api.riotgames.com/tft/league/v1/grandmaster?api_key={api_key}"
-
+counts = 8
 r = requests.get(URL)
 
 data = r.json()
 
-print(data["tier"])
+# print(data)
 # print(data["entries"])
 summoners = {}
 entries = data["entries"]
@@ -46,11 +47,47 @@ matchSet = set()
 for summoner in summonersPUUID:
     puuid = summonersPUUID.get(summoner)
     # print(puuid)
-    matchURL = f"https://{country}.api.riotgames.com/tft/match/v1/matches/by-puuid/{puuid}/ids?count=5&api_key={api_key}"
+    matchURL = f"https://{country}.api.riotgames.com/tft/match/v1/matches/by-puuid/{puuid}/ids?count={counts}&api_key={api_key}"
     ree = requests.get(matchURL)
     data3 = ree.json()
     # print(data3)
     matches = data3
     for id in matches:
         matchSet.add(id)
-print(matchSet)
+# print(matchSet)
+
+comp_counts = {"Space Shrooms": 0,
+                "4 Vanguards 4 Mystics": 0,
+                "6 Cybers": 0,
+                "Jinx Brawlers": 0,
+                "6 Sorcs Riven": 0,
+                "6 BM Slowroll": 0,
+                "6 Rebels": 0,
+                "Mech Sorcs": 0,
+                "Protector Infil": 0,
+                "Comp Not Found": 0,
+                "None": 0}
+
+for matchID in matchSet:
+    matchInfoURL = f"https://{country}.api.riotgames.com/tft/match/v1/matches/{matchID}?api_key={api_key}"
+    reee = requests.get(matchInfoURL)
+    data4 = reee.json()
+    # print(data4)
+    # print(data4.keys())
+    if "status" in data4.keys() and (data4["status"]["status_code"] == 404 or 429):
+        break
+    else:
+        # print(data4)
+        participants = data4["info"]["participants"]
+        for participant in participants:
+            # print(participant)
+            comp = declarecomp.declare_comp(participant)
+            if comp is None:
+                prev_count = comp_counts["None"]
+                comp_counts["None"] = prev_count + 1
+            else:
+                prev_count = comp_counts[comp]
+                comp_counts[comp] = prev_count + 1
+            # print(comp)
+
+print(comp_counts)
