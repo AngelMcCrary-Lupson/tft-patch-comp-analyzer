@@ -1,0 +1,52 @@
+{   "match-count": 4,
+  "lp": 502,
+   "1":{
+      "Space Shrooms":13,
+      "4 Vanguards 4 Mystics":15,
+      "6 Cybers":68,
+      "Jinx Brawlers":64,
+      "6 Sorcs":33,
+      "6 BM Slowroll":12,
+      "6 Rebels":12,
+      "Mech Sorcs":17,
+      "Protectors":5,
+      "Comp Not Found":27
+   },
+   "2":{
+      "Space Shrooms":9,
+      "4 Vanguards 4 Mystics":8,
+      "6 Cybers":56,
+      "Jinx Brawlers":88,
+      "6 Sorcs":34,
+      "6 BM Slowroll":5,
+      "6 Rebels":5,
+      "Mech Sorcs":32,
+      "Protectors":3,
+      "Comp Not Found":26
+   },
+   "3":{
+      "Space Shrooms":20,
+      "4 Vanguards 4 Mystics":19,
+      "6 Cybers":57,
+      "Jinx Brawlers":84,
+      "6 Sorcs":24,
+      "6 BM Slowroll":5,
+      "6 Rebels":2,
+      "Mech Sorcs":35,
+      "Protectors":5,
+      "Comp Not Found":15
+   },
+   "4":{
+      "Space Shrooms":10,
+      "4 Vanguards 4 Mystics":19,
+      "6 Cybers":54,
+      "Jinx Brawlers":86,
+      "6 Sorcs":23,
+      "6 BM Slowroll":10,
+      "6 Rebels":0,
+      "Mech Sorcs":35,
+      "Protectors":4,
+      "Comp Not Found":25
+   },
+   "None":1064
+}

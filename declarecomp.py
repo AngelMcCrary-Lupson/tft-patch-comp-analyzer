@@ -68,14 +68,11 @@ def is_jinx_brawlers(player_comp):
 # is_jinx_brawlers()
 
 # 6 sorcs = 6 sorcerer (tier = 3) and TFT3_Riven
-def is_six_sorcs_riven(player_comp):
-    is_six_sorcs_riven = False
+def is_six_sorcs(player_comp):
+    is_six_sorcs = False
     for trait in player_comp["traits"]:
         if "Set3_Sorcerer" in trait["name"] and trait["tier"] == 3:
-            if "TFT3_Riven" in player_comp["units"]:
-                if not "TFT3_Fizz" and "TFT_Rumble" in player_comp["units"]:
-                    is_six_sorcs_riven = True
-                    return True
+            return True
     return False
 # is_six_sorcs_riven()
 
@@ -110,41 +107,42 @@ def is_mech_sorcs(player_comp):
 # is_mech_sorcs()
 
 # Protector Infil = 4 Protectors (Tier = 2) w/ Fizz and Shaco**** sometimes plays snipers IDK FOR NOW
-def is_protector_infil(player_comp):
-    is_protector_infil = False
+def is_protectors(player_comp):
+    # is_protector_infil = False
     is_protectors = False
     for trait in player_comp["traits"]:
-        if "Protector" in trait["name"] and (trait["tier"] == 1 or 2):
+        if "Protector" in trait["name"] and (trait["tier"] == 2):
             is_protectors = True
-            break
-    if is_protectors:
-        for trait in player_comp["traits"]:
-            if "Infiltrator" in trait["name"] and (trait["tier"] == 1):
-                is_protector_infil = True
-                return True
+            return True
+    # if is_protectors:
+    #     for trait in player_comp["traits"]:
+    #         if "Infiltrator" in trait["name"] and (trait["tier"] == 1):
+    #             is_protector_infil = True
+    #             return True
     return False
 # is_protector_infil();
 
 def return_comp(player_comp):
+    placement = player_comp["placement"]
     if is_space_shrooms(player_comp):
-        return "Space Shrooms"
+        return f"{placement} Space Shrooms"
     elif is_four_vanguards_mystics(player_comp):
-        return "4 Vanguards 4 Mystics"
+        return f"{placement} 4 Vanguards 4 Mystics"
     elif is_six_cybers(player_comp):
-        return "6 Cybers"
+        return f"{placement} 6 Cybers"
     elif is_jinx_brawlers(player_comp):
-        return "Jinx Brawlers"
-    elif is_six_sorcs_riven(player_comp):
-        return "6 Sorcs Riven"
-    elif is_six_rebels(player_comp):
-        return "6 Rebels"
-    elif is_sixbm_slowroll(player_comp):
-        return "6 BM Slowroll"
+        return f"{placement} Jinx Brawlers"
     elif is_mech_sorcs(player_comp):
-        return "Mech Sorcs"
-    elif is_protector_infil(player_comp):
-        return "Protector Infil"
+        return f"{placement} Mech Sorcs"
+    elif is_six_sorcs(player_comp):
+        return f"{placement} 6 Sorcs"
+    elif is_six_rebels(player_comp):
+        return f"{placement} 6 Rebels"
+    elif is_sixbm_slowroll(player_comp):
+        return f"{placement} 6 BM Slowroll"
+    elif is_protectors(player_comp):
+        return f"{placement} Protectors"
     else:
-        return "Comp Not Found"
+        return f"{placement} Comp Not Found" #{player_comp}"
 
 # print (declare_comp())
