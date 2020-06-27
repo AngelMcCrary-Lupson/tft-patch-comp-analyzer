@@ -3,6 +3,14 @@ import json
 import requests
 import declarecomp
 import time
+from datetime import datetime
+
+# datetime object containing current date and time
+run_now = datetime.now()
+
+# dd/mm/YY H:M:S
+dt_string = run_now.strftime("%d/%m/%Y %H:%M:%S")
+print(dt_string)
 
 # print(api_key)
 region = "na1"
@@ -10,7 +18,7 @@ country = "americas"
 league = "challenger"
 URL = f"https://{region}.api.riotgames.com/tft/league/v1/{league}?api_key={api_key}"
 counts = 4
-lp_param = 502
+lp_param = 441
 r = requests.get(URL)
 
 data = r.json()
@@ -139,3 +147,11 @@ for matchID in matchSet:
             # print(comp)
 
 print(comp_counts_ranks)
+with open('comp_data.json', 'w') as outfile:
+    json.dump(comp_counts_ranks), outfile)
+
+run_finished = datetime.now()
+
+# dd/mm/YY H:M:S
+dt_string_done = now.strftime("%d/%m/%Y %H:%M:%S")
+print(dt_string_done)
