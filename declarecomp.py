@@ -122,6 +122,12 @@ def is_protectors(player_comp):
     return False
 # is_protector_infil();
 
+# 6 Dark Stars = 6 Dark Star units
+# def is_six_dark_stars 
+
+# 6 Battlecast = 6 Battlecast units
+# def is_six_bc
+
 def return_comp(player_comp):
     placement = player_comp["placement"]
     if is_space_shrooms(player_comp):
