@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json
 
-with open("results2.json") as f:
+with open("comp_data.json") as f:
     comp_data = json.load(f)
 
 # def parseJSON(data):
@@ -13,8 +13,6 @@ with open("results2.json") as f:
 # print(comp_data)
 
 labels = ['First', 'Second', 'Third', 'Fourth']
-# men_means = [20, 34, 30, 35, 27]
-# women_means = [25, 32, 34, 20, 25]
 
 comp_array = {
     "Space Shrooms": [],
@@ -44,7 +42,7 @@ width = 0.05  # the width of the bars
 fig, ax = plt.subplots()
 
 def autolabel(rects):
-    """Attach a text label above each bar in *rects*, displaying its height."""
+    # """Attach a text label above each bar in *rects*, displaying its height."""
     for rect in rects:
         height = rect.get_height()
         ax.annotate('{}'.format(height),
@@ -57,15 +55,12 @@ for comp_name in comp_array.keys():
     rect = ax.bar(x + index*width, comp_array[comp_name], width, label=comp_name)
     autolabel(rect)
     x_coor = x + index*width
-    print(index)
-    print(x)
-    print(x_coor)
+    # print(index)
+    # print(x)
+    # print(x_coor)
     index += 1
     if index >= 10:
         index = 0
-
-# rects1 = ax.bar(x - width/2, men_means, width, )
-# rects2 = ax.bar(x + width/2, women_means, width, label='Women')
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('Scores')
@@ -74,12 +69,6 @@ ax.set_xticks(x)
 ax.set_xticklabels(labels)
 ax.legend()
 
-
-
-
-
-# autolabel(rects1)
-# autolabel(rects2)
 
 fig.tight_layout()
 

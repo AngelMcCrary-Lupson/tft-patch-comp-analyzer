@@ -10,15 +10,16 @@ run_now = datetime.now()
 
 # dd/mm/YY H:M:S
 dt_string = run_now.strftime("%d/%m/%Y %H:%M:%S")
-print(dt_string)
+print(f"Start: {dt_string}")
 
 # print(api_key)
 region = "na1"
 country = "americas"
 league = "challenger"
 URL = f"https://{region}.api.riotgames.com/tft/league/v1/{league}?api_key={api_key}"
-counts = 4
-lp_param = 441
+counts = 1
+lp_param = 900
+sleep_time = 0
 r = requests.get(URL)
 
 data = r.json()
@@ -40,7 +41,7 @@ summonersPUUID = {}
 
 for summoner in summoners:
     # print(summoner)
-    time.sleep(1)
+    time.sleep(sleep_time)
     puuidURL = f"https://{region}.api.riotgames.com/tft/summoner/v1/summoners/by-name/{summoner}?api_key={api_key}"
     re = requests.get(puuidURL)
     data2 = re.json()
@@ -57,7 +58,7 @@ matchSet = set()
 # print(type(matchSet))
 
 for summoner in summonersPUUID:
-    time.sleep(1)
+    time.sleep(sleep_time)
     puuid = summonersPUUID.get(summoner)
     # print(puuid)
     matchURL = f"https://{country}.api.riotgames.com/tft/match/v1/matches/by-puuid/{puuid}/ids?count={counts}&api_key={api_key}"
@@ -114,7 +115,7 @@ comp_counts_ranks = {
         }
 
 for matchID in matchSet:
-    time.sleep(1)
+    time.sleep(sleep_time)
     matchInfoURL = f"https://{country}.api.riotgames.com/tft/match/v1/matches/{matchID}?api_key={api_key}"
     reee = requests.get(matchInfoURL)
     data4 = reee.json()
@@ -146,12 +147,12 @@ for matchID in matchSet:
                 comp_counts_ranks[comp_rank][comp_composition] = prev_count + 1
             # print(comp)
 
-print(comp_counts_ranks)
+# print(comp_counts_ranks)
 with open('comp_data.json', 'w') as outfile:
-    json.dump(comp_counts_ranks), outfile)
+    json.dump(comp_counts_ranks, outfile)
 
 run_finished = datetime.now()
 
 # dd/mm/YY H:M:S
-dt_string_done = now.strftime("%d/%m/%Y %H:%M:%S")
-print(dt_string_done)
+dt_string_done = run_finished.strftime("%d/%m/%Y %H:%M:%S")
+print(f"Finished: {dt_string_done}")
