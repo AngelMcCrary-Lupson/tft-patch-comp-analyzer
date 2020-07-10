@@ -14,12 +14,12 @@ def getleague(values):
     print(f"Start: {dt_string}")
 
     # print(api_key)
-    api_key = values[4].strip()
-    filename = values[5]
-    region = values[1]
-    league = values[0].lower()
-    counts = int(values[3])
-    lp_param = int(values[2])
+    api_key = values['-API-'].strip()
+    filename = values['-FILESAVE-']
+    region = values['-REGION-']
+    league = values['-LEAGUE-'].lower()
+    counts = int(values['-MATCHES-'])
+    lp_param = int(values['-LPMIN-'])
     sleep_time = 1
     country = ""
     americas = {"BR1", "LA1", "LA2", "NA1", "OC1"}

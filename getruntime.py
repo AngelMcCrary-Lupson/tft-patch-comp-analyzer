@@ -1,12 +1,13 @@
 import requests
 import json
+import math
 
 
 def construct(values):
-    region = values[1].lower()
-    league = values[0].lower()
-    api_key = values[4]
-    print(f"{region}, {league}, {api_key}")
+    region = values['-REGION-'].lower()
+    league = values['-LEAGUE-'].lower()
+    api_key = values['-API-']
+    # print(f"{region}, {league}, {api_key}")
     URL = f"https://{region}.api.riotgames.com/tft/league/v1/{league}?api_key={api_key}"
     # print(URL)
     r = requests.get(URL)
@@ -16,8 +17,8 @@ def construct(values):
         print(data)
         return data["status"]
     else:
-        lp_param = int(values[2])
-        matches = int(values[3])
+        lp_param = int(values['-LPMIN-'])
+        matches = int(values['-MATCHES-'])
         summoners = {}
         entries = data["entries"]
 
@@ -28,9 +29,14 @@ def construct(values):
             if lp > lp_param:
                 summoners[name] = lp
 
-        print(len(summoners))
+        # print(len(summoners))
+        # runtime = (len(summoners) * 2)
+        # runtime = int(math.pow(runtime, matches))
+        # runtime = runtime + 5
 
-        runtime = (len(summoners) * 2 * matches)
+        runtime = (len(summoners) * 2)
+        runtime = runtime + (runtime * matches)
         # approx. runtime in seconds
         print(runtime)
-        return runtime
+        runtime_dict = {"runtime": int(runtime * 1.25)}
+        return runtime_dict
