@@ -8,7 +8,7 @@
   <h3 align="center">Team Fight Tactics Player Composition Analyzer</h3>
 
   <p align="center">
-    This project recieves player match data from Riot's servers and analyzes competitive compositions and strategies.
+    This project receives player match data from Riot's servers and analyzes competitive compositions and strategies.
     <br />
     <a href="https://github.com/AngelMcCrary-Lupson/tft-patch-comp-analyzer"><strong>Explore the docs »</strong></a>
     <br />
@@ -43,10 +43,10 @@
 
 ### Built With
 
-* [](Python)
-* [](Matplotlib)
-* [](PySimpleGui)
-* [](Riot API)
+* [Python](https://www.python.org/)
+* [Matplotlib](https://matplotlib.org/)
+* [PySimpleGui](https://pysimplegui.readthedocs.io/en/latest/)
+* [Riot API](https://developer.riotgames.com/)
 
 
 
@@ -57,7 +57,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-List of Python libraries neccessary to run the program
+List of Python libraries necessary to run the program
 * python 3.7
 * pip
 * matplotlib
@@ -72,16 +72,28 @@ List of Python libraries neccessary to run the program
 git clone https://github.com/AngelMcCrary-Lupson/tft-patch-comp-analyzer.git
 ```
 2. Install Python library packages
-3. Get a Riot API developer key
+3. Get a Riot API developer key:
 https://developer.riotgames.com/
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+Expected Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Generate a JSON file of player composition data
+2. Fill in the form with the desired parameters to generate a JSON file of player composition data.
+[gen-product-screenshot]: demo-gen.png
+3. Load the generated file to graph the data
+[graph-product-screenshot]: demo-graph.png
 
+Library Setup Test
+<br />
+Load the file demodata.json to ensure Matplotlib is setup correctly
+
+Player Composition Analyzing
+<br />
+declarecomp.py is responsible for determining a player's composition. Edit this script to add or update the algorithm. If a new composition is added, append this to the comp_counts_ranks array in getleague.py and comp_array in barchart.py for a new data point.
 
 
 <!-- ROADMAP -->
@@ -89,7 +101,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 See the [open issues](https://github.com/AngelMcCrary-Lupson/tft-patch-comp-analyzer/issues) for a list of proposed features (and known issues).
 
-Updating the player composition analyzer to the current TFT meta.
+* Updating the player composition analyzer to the current TFT meta.
 
 
 <!-- CONTRIBUTING -->
@@ -109,8 +121,8 @@ Contributions are what make the open source community such an amazing place to b
 ## Contact
 
 Project Creators:
-https://github.com/AngelMcCrary-Lupson
-https://github.com/Wisequacker
+* https://github.com/AngelMcCrary-Lupson
+* https://github.com/Wisequacker
 
 Project Link: [https://github.com/AngelMcCrary-Lupson/tft-patch-comp-analyzer](https://github.com/AngelMcCrary-Lupson/tft-patch-comp-analyzer)
 
@@ -120,5 +132,3 @@ Project Link: [https://github.com/AngelMcCrary-Lupson/tft-patch-comp-analyzer](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[product-screenshot]: images/screenshot.png
