@@ -81,10 +81,11 @@ https://developer.riotgames.com/
 ## Usage
 Expected Usage
 
-1. Generate a JSON file of player composition data
-2. Fill in the form with the desired parameters to generate a JSON file of player composition data.
+1. Run welcomegui.py script with python
+2. Generate a JSON file of player composition data
+3. Fill in the form with the desired parameters to generate a JSON file of player composition data.
 [![Product Demo Generator][gen-product-screenshot]]
-3. Load the generated file to graph the data
+4. Load the generated file to graph the data
 [![Product Demo Graph][graph-product-screenshot]]
 
 Library Setup Test
