@@ -83,16 +83,16 @@ Expected Usage
 
 1. Generate a JSON file of player composition data
 2. Fill in the form with the desired parameters to generate a JSON file of player composition data.
-[gen-product-screenshot]: demo-gen.png
+[![Product Demo Generator][gen-product-screenshot]]
 3. Load the generated file to graph the data
-[graph-product-screenshot]: demo-graph.png
+[[![Product Demo Graph][graph-product-screenshot]]
 
 Library Setup Test
-<br />
+
 Load the file demodata.json to ensure Matplotlib is setup correctly
 
 Player Composition Analyzing
-<br />
+
 declarecomp.py is responsible for determining a player's composition. Edit this script to add or update the algorithm. If a new composition is added, append this to the comp_counts_ranks array in getleague.py and comp_array in barchart.py for a new data point.
 
 
@@ -132,3 +132,5 @@ Project Link: [https://github.com/AngelMcCrary-Lupson/tft-patch-comp-analyzer](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[graph-product-screenshot]: demo-graph.png
+[gen-product-screenshot]: demo-gen.png
