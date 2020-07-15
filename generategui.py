@@ -75,24 +75,9 @@ def the_gui():
         [sg.Button('Go'), sg.Cancel()]
     ]
 
-
     window = sg.Window('TFT Player Composition Analyzer', layout, default_element_size=(40, 1), grab_anywhere=False)
-
     event, values = window.read()
 
-    # some code that sends values to getleague.py
-    # results in either error incase key doesnt work or something else or a progress bar based
-    # off of approximate number of requests
-    # pop up for success saying where it was save
-    # give option to go back to generate more, main, or plot data
-
-    # *might have to seperate getleague and making requests to get approx runtime*
-    # *have the approx runtime request also validate the api key!
-
-
-
-
-# I have to press go twice for the thread to start????
     work_id = 0
     while True:
         event, values = window.Read(timeout=100)
@@ -112,7 +97,6 @@ def the_gui():
                     print("Build Thread")
                     thread_id = threading.Thread(target=long_function_wrapper, args=(work_id, gui_queue, values,), daemon=True)
                     thread_id.start()
-                    # how should I deal with cancelling the process?
                     for i in range(runtime["runtime"]):
                         time.sleep(1)
                         if not sg.OneLineProgressMeter('File Generating', i+1, runtime["runtime"], 'single'):
@@ -120,11 +104,10 @@ def the_gui():
             else:
                 sg.Popup('Looks like one or more of your inputs is invalid, please try again')
         try:
-            message = gui_queue.get_nowait()    # see if something has been posted to Queue
-        except queue.Empty:                     # get_nowait() will get exception when Queue is empty
-            message = None                      # nothing in queue so do nothing
+            message = gui_queue.get_nowait()
+        except queue.Empty:
+            message = None
 
-        # if message received from queue, then some work was completed
         if message is not None:
             print("Completed")
             sg.Popup('Your file has finished generating!')
